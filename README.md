@@ -21,6 +21,7 @@ Assuming that 2 LEDS have been wired to GPIO0 (such that one is off while the ot
 3. Try to visit any page, and you will be presented with the WifiManager configuration page.
 4. After the appropriate credentials have been supplied, the ESP8266 will reboot.
 5. Reconnect to your Wifi, and in a browser enter, 'http://esp8266.local' - this should present you with a CSS button that allows the user to toggle the state of GPIO2, which is connected to a relay.
+6. The LED's will no longer flash. One LED will indicate the relay is off, the other that it is on.
 
 ![picture alt](button-off.jpg "Relay off")
 ![picture alt](button-on.jpg "Relay on")
