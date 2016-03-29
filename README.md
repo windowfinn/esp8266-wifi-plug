@@ -22,6 +22,9 @@ Assuming that 2 LEDS have been wired to GPIO0 (such that one is off while the ot
 4. After the appropriate credentials have been supplied, the ESP8266 will reboot.
 5. Reconnect to your Wifi, and in a browser enter, 'http://esp8266.local' - this should present you with a CSS button that allows the user to toggle the state of GPIO2, which is connected to a relay.
 
+![picture alt](button-off.jpg "Relay off")
+![picture alt](button-on.jpg "Relay on")
+
 ## History
 
 * Started as a fork of esp-arduino-boot
