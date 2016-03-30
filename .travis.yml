@@ -13,7 +13,7 @@ install:
   - arduino --board esp8266:esp8266:generic --save-prefs
   - arduino --pref "compiler.warning_level=all" --save-prefs
 script:
-  - arduino --verify --board arduino:avr:uno $PWD/esp8266-wifi-plug.ino
+  - arduino --verify $PWD/esp8266-wifi-plug.ino
 notifications:
   email:
     on_success: change
