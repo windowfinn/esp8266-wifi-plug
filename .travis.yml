@@ -12,6 +12,7 @@ install:
   - arduino --install-boards esp8266:esp8266
   - arduino --board esp8266:esp8266:generic --save-prefs
   - arduino --pref "compiler.warning_level=all" --save-prefs
+  - arduino --install-library "WifiManager"
 script:
   - arduino --verify $PWD/esp8266-wifi-plug.ino
 notifications:
