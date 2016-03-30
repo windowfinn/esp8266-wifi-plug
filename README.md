@@ -1,4 +1,4 @@
-# esp8266-wifi-plug
+# esp8266-wifi-plug [![Build Status](https://travis-ci.org/windowfinn/esp8266-wifi-plug.svg?branch=master)](https://travis-ci.org/windowfinn/esp8266-wifi-plug)
 
 This Arduino language code is intended for an ESP8266 chip that controls a relay on GPIO2 and an LED(s) on GPIO0. The relay controlling if mains voltage reaches a device or not.
 
