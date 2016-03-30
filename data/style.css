@@ -1,5 +1,6 @@
 body {
 	background: url('images/bg.png');
+	font-family: "Lucida Console", Monaco, monospace;
 }
 section {
 	margin: 50px auto 0;
@@ -15,10 +16,6 @@ h1, h2, h3 {
 }
 :active, :focus {
 	outline: 0;
-}
-
-.error {
-    font-family: "Lucida Console", Monaco, monospace;
 }
 
 .error h1 {
