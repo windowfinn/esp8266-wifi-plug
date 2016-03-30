@@ -30,7 +30,7 @@ ESP8266WebServer server(80);
 //Local intialization. Once its business is done, there is no need to keep it around
 WiFiManager wifiManager;
 
-const String a404Html = "HTTP/1.1 404 Not Found\r\n\r\n";
+const String HTTP_404 = "<!DOCTYPE html><html><head><meta charset=\"utf-8\" /><title>Wifi Plug Control</title><link rel=\"stylesheet\" href=\"style.css\"></head><body class=\"error\"><section><h1>404</h1><h2>Oops! The page you are looking for does not exist.</h2></section><section class=\"button\"><h3><a href=\"/\">&#xf015;</a></section></body></html>";
 const String openingHtml = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE HTML>\r\n<html>";
 const String closingHtml = "</html>\r\n\r\n";
 
@@ -201,7 +201,7 @@ void setup() {
 
   server.onNotFound([](){
     if(!handleFileRead(server.uri()))
-      server.send(404, "text/plain", a404Html);
+      server.send(404, "text/plain", HTTP_404);
   });
 
   // Start TCP (HTTP) server

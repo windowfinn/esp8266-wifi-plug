@@ -10,12 +10,21 @@ section.button {
 	width: 75px;
 	/*height: 95px;*/
 }
-h1 {
+h1, h2, h3 {
     color: white;
 }
 :active, :focus {
 	outline: 0;
 }
+
+.error {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.error h1 {
+    font-size: 50pt;
+}
+
 /** Font-Face **/
 @font-face {
   font-family: "FontAwesome";
