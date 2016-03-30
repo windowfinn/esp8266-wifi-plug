@@ -117,18 +117,12 @@ void handleOff() {
 }
 
 void handleClear() {
-  String s = openingHtml;
-  s += "Hello from ESP8266";
-  s += "<p>Clearing the settings.<p>";
-  s += closingHtml;
-  USE_SERIAL.println("Sending 200");
-  server.send(200, "text/plain", s);
-
   wifiManager.resetSettings();
 
   WiFi.disconnect();      //after EEPROM is cleared, disconnect from the current wifi access
   ESP.reset();
 }
+
 
 void setup() {
   USE_SERIAL.begin(115200);
