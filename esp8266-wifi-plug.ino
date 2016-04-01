@@ -133,6 +133,9 @@ void setup() {
   //Relay pin
   pinMode(RELAY, OUTPUT);
 
+  //Ensure the Relay is off
+  digitalWrite(RELAY, HIGH);
+
   // start ticker with 0.5 because we start in AP mode and try to connect
   ticker.attach(0.6, tick);
 
