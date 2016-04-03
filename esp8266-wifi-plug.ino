@@ -20,9 +20,6 @@
 
 Ticker ticker;
 
-// multicast DNS responder
-MDNSResponder mdns;
-
 // TCP server at port 80 will respond to HTTP requests
 ESP8266WebServer server(80);
 
@@ -182,7 +179,7 @@ void setup() {
   //   the fully-qualified domain name is "esp8266.local"
   // - second argument is the IP address to advertise
   //   we send our IP address on the WiFi network
-  if (!mdns.begin("esp8266", WiFi.localIP())) {
+  if (!MDNS.begin("esp8266", WiFi.localIP())) {
     USE_SERIAL.println("Error setting up MDNS responder!");
     while (1) {
       delay(1000);
@@ -203,12 +200,15 @@ void setup() {
   // Start TCP (HTTP) server
   server.begin();
   USE_SERIAL.println("TCP server started");
+
+  // Add service to MDNS
+  MDNS.addService("http", "tcp", 80);
 }
 
 void loop() {
 
   // Check for any mDNS queries and send responses
-  mdns.update();
+  MDNS.update();
   server.handleClient();
 
 }
